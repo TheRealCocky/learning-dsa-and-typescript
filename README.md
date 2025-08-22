@@ -13,8 +13,7 @@
 - 🏗 **OOP Principles** – Abstraction, Encapsulation, Inheritance, Polymorphism  
 - 🔗 **Data Structures & Algorithms** – Arrays, Linked Lists, Stacks, Trees, Graphs  
 - ⚡ **Framework Readiness** – NestJS (backend), Next.js (frontend)  
-- 🛢 **Databases** – MongoDB & PostgreSQL  
-- 💻 **.NET** – Expanding full-stack versatility  
+- 🛢 **Databases** – MongoDB & PostgreSQL   
 
 ---
 
@@ -23,7 +22,6 @@
   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TS Badge">
   <img src="https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white" alt="NestJS Badge">
   <img src="https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white" alt="Next.js Badge">
-  <img src="https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=white" alt=".NET Badge">
   <img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white" alt="Mongo Badge">
   <img src="https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white" alt="Postgres Badge">
 </p>
