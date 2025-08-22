@@ -8,18 +8,6 @@
   My curated journey through <strong>TypeScript</strong>, <strong>OOP</strong>, and <strong>Data Structures & Algorithms</strong>, while exploring modern frameworks and databases.
 </p>
 
----
-
-## 📸 Gallery
-<p align="center">
-  <img src="assets/ts-logo.png" alt="TypeScript Logo" width="120" style="margin-right:20px;">
-  <img src="assets/dsa.png" alt="DSA Concepts" width="220" style="margin-right:20px;">
-  <img src="assets/oop.png" alt="OOP Illustration" width="220" style="margin-right:20px;">
-  <img src="assets/code-snippet.png" alt="Code Example" width="220">
-</p>
-
----
-
 ## 📚 What I’m Learning
 - 🟦 **TypeScript** – Strong typing, generics, and advanced features  
 - 🏗 **OOP Principles** – Abstraction, Encapsulation, Inheritance, Polymorphism  
