@@ -1,0 +1,143 @@
+class Node{
+    constructor(element) {
+        this.value=element;
+        this.next=undefined;
+        this.prev=undefined;
+    }
+}
+
+class DoubleLinkedList{
+    constructor() {
+        this.head=undefined;
+        this.tail=undefined;
+        this.counter=0;
+    }
+
+    push(element){
+        const node= new Node(element);
+        if(this.head ==null){
+            this.head=node;
+            this.tail=node;
+        }else{
+            node.prev=this.tail;
+            this.tail.next=node;
+            this.tail=node;
+        }
+        this.counter++;
+    }
+
+    GetElementAt(position){
+        if(position>= 0 && position < this.counter){
+            let index;
+            let current;
+            if(position ===this.counter/2){
+                index=0;
+                current=this.head;
+                while(index< position){
+                    current=current.next
+                    index++;
+                }
+            }
+            else{
+                index=this.counter-1;
+                current=this.tail;
+                while(index>position){
+                    current=current.prev;
+                    index--;
+                }
+            }
+            return current;
+        }
+        return undefined;
+    }
+
+    DeleteAt(position){
+        if(position< 0 || position >=this.counter){
+            return undefined;
+        }
+        let current=this.head;
+        if(position===0){
+            this.head=current.next;
+            if(this.head) this.head.prev=undefined;
+            if(position===this.counter-1) this.tail=undefined;
+        }
+        else  if(position===this.counter-1){
+            current=this.tail;
+            this.tail=current.prev;
+            this.tail.next=undefined;
+        }
+        else{
+            current=this.GetElementAt(position);
+            current.prev.next=current.next;
+            current.next.prev=current.prev;
+        }
+        this.counter--;
+        return current;
+
+    }
+
+    InsertAt(position,element){
+        if(position< 0 || position >=this.counter){
+            return undefined;
+        }
+
+        let node=new Node(element)
+        if(position===0){
+            if(!this.head){
+                this.head=node;
+                this.tail=node;
+            }else{
+                node.next=this.head;
+                this.head.next=node;
+                this.head=node;
+            }
+        }
+        else if(position===this.counter){
+            node.prev=this.tail;
+            this.tail.prev=node;
+            this.tail=node;
+        }
+        else {
+            let previous=this.GetElementAt(position-1);
+            let current=previous.next;
+            node.next=current;
+            node.prev=previous;
+            previous.next=node;
+            current.prev=node;
+        }
+        this.counter++;
+        return true;
+
+    }
+    ToArray(){
+        let arr=[];
+        let current=this.head;
+        while(current != null){
+            arr.push(current.value);
+            current=current.next;
+        }
+        return arr;
+    }
+
+    ToReverseArray(){
+        let arr=[];
+        let current=this.tail;
+        while(current != null){
+            arr.push(current.value);
+            current=current.prev;
+        }
+        return arr;
+    }
+}
+
+const lista= new DoubleLinkedList();
+lista.push(10);lista.push(20);lista.push(30);lista.push(40);lista.push(50);lista.push(60);lista.push(70);lista.push(80);
+console.log("lista:",lista.ToArray());
+console.log("Lista invertida:",lista.ToReverseArray());
+let pegar=lista.GetElementAt(3);
+console.log("pegou:",pegar.value);
+let apagar=lista.DeleteAt(7);
+console.log("apagou:",apagar.value);
+let por=lista.InsertAt(7,65432);
+
+console.log("lista final:",lista.ToArray());
